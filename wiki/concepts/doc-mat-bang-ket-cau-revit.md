@@ -22,7 +22,8 @@ Kinh nghiệm rút ra khi phân tích mặt bằng kết cấu tầng điển h�
 - `create_text` dùng căn giữa (J M), nên x, y là tâm chữ.
 - Các lệnh `(command ...)` trên LT bị OSMODE của người dùng hút điểm. Nên tắt OSMODE tạm thời khi chạy lệnh nhận điểm và khôi phục ngay sau đó; lệnh đọc biến thì không cần bọc.
 - Nếu người dùng chuyển sang bản vẽ khác trong lúc chạy, MCP có thể treo; chuyển lại rồi gọi `ensure_ready`.
-- Khi có hai cửa sổ AutoCAD LT, MCP có thể báo "LT instance changed". Ghim đúng PID của phiên làm việc rồi gọi lại `ensure_ready`.
+- Khi có hai cửa sổ AutoCAD LT, MCP có thể báo "LT instance changed" hoặc "no AutoCAD window found". Không cần đóng cửa sổ của người khác: gọi một lệnh bất kỳ của server MCP thứ hai (gateway sẽ chuyển server), rồi gọi lại `system ensure_ready` ở server chính. Server mới được ghim vào PID cũ, với doc_id và lease mới.
+- Bản launcher cũ báo `E_DOCUMENT_ID_MISMATCH` khi bản vẽ nằm ở đường dẫn có dấu tiếng Việt. Cập nhật launcher; nếu chưa cập nhật được, đọc từ DXF xuất sẵn và đối chiếu số entity theo layer bằng `entity.count` trước khi tin dữ liệu.
 - Batch lớn có thể báo timeout dù đã chạy xong; đếm lại bằng `entity.count` trước khi chạy lại.
 
 Bản vẽ **kiến trúc** đọc theo trang riêng [[doc-mat-bang-kien-truc-revit]]: căn hộ, phòng, nội thất, tiện ích, cây xanh. Đừng áp quy trình kết cấu (cột, dầm, sàn) lên bản kiến trúc.
