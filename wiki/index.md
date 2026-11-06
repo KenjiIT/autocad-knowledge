@@ -9,3 +9,6 @@
 - [Lỗi thường gặp khi bóc khối lượng qua AutoCAD LT và MCP](boc-khoi-luong/loi-thuong-gap-boc-khoi-luong-qua-mcp.md) — bảng hiện tượng, nguyên nhân, cách làm.
 - [Kênh COM bị khóa (poisoned) sau một lệnh đọc quá hạn](cad-mcp/khoa-kenh-com-poisoned.md) — dấu hiệu, cách khôi phục, cách đọc bản vẽ lớn để không bị khóa.
 - [drawing open báo "opened" nhưng bản vẽ không mở (AutoCAD đầy đủ)](cad-mcp/drawing-open-bao-thanh-cong-gia.md) — nguyên nhân, cách kiểm tra bản vẽ thật sự đã mở.
+- [cad_batch kẹt "Only one AutoCAD transaction may be active" sau lỗi giữa chừng](cad-mcp/cad-batch-ket-transaction-sau-loi-giua-chung.md) — phần đã tạo vẫn nằm trong bản vẽ, đếm lại rồi tạo tiếp bằng entity create_batch.
+- [Điểm chèn của TEXT và MTEXT khi tạo qua MCP](cad-mcp/diem-chen-text-mtext-qua-mcp.md) — TEXT neo dưới-trái, MTEXT neo trên-trái; công thức căn giữa.
+- [Chữ tiếng Việt bị lỗi font khi ghi chú qua MCP](cad-mcp/chu-tieng-viet-loi-font-khi-ghi-chu-qua-mcp.md) — kiểu chữ hiện hành không có tiếng Việt; ghi font trong nội dung MTEXT.
